@@ -1,0 +1,1 @@
+"""Toda la parte de analisis de los datos de los sensores"""
