@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <temperature_sensor.h>
+#include <temperature_sensor_fan.h>
 
 void setup()
 {
