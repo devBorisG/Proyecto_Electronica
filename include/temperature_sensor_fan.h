@@ -9,7 +9,7 @@ float temperature = 0; // Variable donde se almacenara el datos de temperatura
 #define DHTTYPE DHT11     // Se selecciona el DHT11 que es el que tenemos
 DHT dht(DHTPIN, DHTTYPE); // Se inicia una variable que será usada por Arduino para comunicarse con el sensor
 
-void monitor_temperature()
+void activate_fan()
 {
     temperature = dht.readTemperature(); // Se lee la temperatura
     // Se imprimen las variables

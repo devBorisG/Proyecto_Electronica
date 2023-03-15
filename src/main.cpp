@@ -8,5 +8,5 @@ void setup()
 }
 void loop()
 {
-  monitor_temperature();
+  activate_fan();
 }
