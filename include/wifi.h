@@ -1,4 +1,4 @@
-#include <SofwareSerial.h>
+#include <SoftwareSerial.h>
 SofwareSerial BT1(3,2);
 
 void setuo() {
