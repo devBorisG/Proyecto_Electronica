@@ -4,8 +4,8 @@
 
 int motor = 3; // Pin de acceso al transistor que controlara el flujo de corriente hacia el motor
 int led1 = 11;
-int out_ultraSonic = 10;
-int in_ultraSonic = 9;
+int out_ultraSonic = 10; //TRIGGER
+int in_ultraSonic = 9; //ECHO
 
 void setup()
 {
