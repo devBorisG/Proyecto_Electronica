@@ -18,5 +18,6 @@ void setup()
 }
 void loop()
 {
-  activate_light(led1, out_ultraSonic, in_ultraSonic);
+  activate_fan(motor);
+  activate_light(led1,out_ultraSonic,in_ultraSonic);
 }

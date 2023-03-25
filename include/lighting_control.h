@@ -18,4 +18,7 @@ void activate_light(int led1, int out_ultraSonic, int in_ultraSonic){
     }else{
         digitalWrite(led1, LOW);
     }
+    Serial.print("Distancia del Objeto:");
+    Serial.print(dis);
+    Serial.println(" cm");
 }
