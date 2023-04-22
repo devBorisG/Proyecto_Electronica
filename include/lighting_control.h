@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-long dis;
-long tiem;
+long distance;
+long time;
 
 void activate_light(int led1, int out_ultraSonic, int in_ultraSonic)
 {
@@ -9,10 +9,10 @@ void activate_light(int led1, int out_ultraSonic, int in_ultraSonic)
     delayMicroseconds(5);
     digitalWrite(out_ultraSonic, HIGH); // Envio del pulso
     delayMicroseconds(10);
-    tiem = pulseIn(in_ultraSonic, HIGH); // Formula para medir el pulso entrante
-    dis = long(0.017 * tiem);            // Formula para calcular la distancia del pulso entrante
+    time = pulseIn(in_ultraSonic, HIGH); // Formula para medir el pulso entrante
+    distance = long(0.017 * time);            // Formula para calcular la distancia del pulso entrante
 
-    if (0 < dis <= 10)
+    if (0 < distance <= 10)
     {
         digitalWrite(led1, HIGH);// Para indicarle a cuantos cm debe de ejecutar la acccion
     }
@@ -21,6 +21,6 @@ void activate_light(int led1, int out_ultraSonic, int in_ultraSonic)
         digitalWrite(led1, LOW);
     }
     Serial.print("Distancia del Objeto:");
-    Serial.print(dis);
+    Serial.print(distance);
     Serial.println(" cm");
 }
