@@ -3,18 +3,12 @@
 
 void open_door(Servo servoMotor)
 {
-    // Desplazamos a la posición 0º
-    servoMotor.write(0);
-    // Esperamos 1 segundo
-    delay(1000);
+    servoMotor.write(0); // Desplazamos a la posición 0º
+    delay(1000);         // Esperamos 1 segundo
 
-    // Desplazamos a la posición 90º
-    servoMotor.write(90);
-    // Esperamos 1 segundo
-    delay(1000);
+    servoMotor.write(90); // Desplazamos a la posición 90º
+    delay(1000);          // Esperamos 1 segundo
 
-    // Desplazamos a la posición 180º
-    servoMotor.write(180);
-    // Esperamos 1 segundo
-    delay(1000);
+    servoMotor.write(180); // Desplazamos a la posición 180º
+    delay(1000);           // Esperamos 1 segundo
 }
