@@ -9,13 +9,13 @@ void open_parking(Servo servoMotor){
     int valorFR = analogRead(A0);
     Serial.print("luminosidad: ");
     Serial.println(valorFR);
-    if(valorFR < 190){ //190 es relativo al lugar donde nos encontremos
+    if(valorFR < 25){ //190 es relativo al lugar donde nos encontremos
         angulo = 0;
         servoMotor.write(angulo);
         delay(500);
-        Serial.print("angulo: ");
         Serial.println(angulo);
-    }else if(valorFR > 200){
+        delay(5000);
+    }else{
         angulo = 90;
         servoMotor.write(angulo);
         delay(500);

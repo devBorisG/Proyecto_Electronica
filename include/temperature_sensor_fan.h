@@ -17,7 +17,8 @@ void activate_fan(int motor)
     Serial.println(" C°");
     delay(1000); // Se espera 2 segundos para seguir leyendo datos
 
-    if(temperature>=26){
+    if(temperature>=20){
+        Serial.print("Prende");
         digitalWrite(motor, HIGH); //Encender el motor si la temperatura esta por encima de 25°C; se puede cambiar "HIGH" por "1", son equivalentes
     }else{
         digitalWrite(motor, LOW); //El motor se apaga si el sensor analiza temperatura por debado de los 25°c

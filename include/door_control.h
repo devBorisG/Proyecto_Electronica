@@ -1,14 +1,28 @@
 #include <Servo.h>
 #include <Arduino.h>
 
-void open_door(Servo servoMotor)
+int aux = 0;
+
+void open_door(Servo servoMotor2, int out_ultraSonic2, int in_ultraSonic2)
 {
-    servoMotor.write(0); // Desplazamos a la posición 0º
-    delay(1000);         // Esperamos 1 segundo
-
-    servoMotor.write(90); // Desplazamos a la posición 90º
-    delay(1000);          // Esperamos 1 segundo
-
-    servoMotor.write(180); // Desplazamos a la posición 180º
-    delay(1000);           // Esperamos 1 segundo
+    digitalWrite(out_ultraSonic2, LOW);
+    delayMicroseconds(5);
+    digitalWrite(out_ultraSonic2, HIGH);
+    delayMicroseconds(10);
+    time = pulseIn(in_ultraSonic2, HIGH);
+    distance  = long(time * 10 /292 /2);
+    if (distance > 14){
+        while (aux<90)
+        {
+        aux++;
+        servoMotor2.write(aux);
+        delay(30);
+        }
+    }else{
+        while(aux>0){
+        aux--;
+        servoMotor2.write(aux);
+        delay(30);
+        }
+    }
 }
